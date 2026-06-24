@@ -1,4 +1,7 @@
 package com.dgsw.ttk.ttk.domain.post.repository;
 
-public interface PostRepository {
+import com.dgsw.ttk.ttk.domain.post.entity.Post;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PostRepository extends JpaRepository<Post, String> {
 }
