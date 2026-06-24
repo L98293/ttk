@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostService implements CreatePost {
 
-    @Autowired
-    private PostRepository postRepository;
+	@Autowired
+	private PostRepository postRepository;
 
-    @Override
-    public CreatePostResponse createPost(CreatePostRequest createPostRequest) {
+	@Override
+	public CreatePostResponse createPost(CreatePostRequest createPostRequest) {
 
-        postRepository.save(createPostRequest.toEntity(createPostRequest));
+		postRepository.save(createPostRequest.toEntity(createPostRequest));
 
-        return CreatePostResponse.of("제출되었습니다.");
-    }
+		return CreatePostResponse.of("제출되었습니다.");
+	}
 }

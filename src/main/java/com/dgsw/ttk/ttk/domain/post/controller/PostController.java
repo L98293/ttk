@@ -6,6 +6,7 @@ import com.dgsw.ttk.ttk.domain.post.service.usecase.CreatePost;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class PostController {
 
-    @Autowired
-    private CreatePost createPost;
+	@Autowired
+	private CreatePost createPost;
 
-    @PostMapping("/post")
-    public ResponseEntity<CreatePostResponse> createPost(CreatePostRequest createPostRequest) {
+	@PostMapping("/post")
+	public ResponseEntity<CreatePostResponse> createPost(@RequestBody CreatePostRequest createPostRequest) {
 
-        return ResponseEntity.ok(createPost.createPost(createPostRequest));
-    }
+		return ResponseEntity.ok(createPost.createPost(createPostRequest));
+	}
 }

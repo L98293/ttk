@@ -7,19 +7,19 @@ import java.util.UUID;
 
 public record CreatePostRequest(
 
-        String studentId,
-        String studentName,
-        String issue
+		String studentId,
+		String studentName,
+		String issue
 ) {
 
-    public Post toEntity(CreatePostRequest createPostRequest) {
+	public Post toEntity(CreatePostRequest createPostRequest) {
 
-        return Post.builder()
-                .id(UUID.randomUUID())
-                .studentId(createPostRequest.studentId)
-                .studentName(createPostRequest.studentName)
-                .issue(createPostRequest.issue)
-                .status(Status.WAIT)
-                .build();
-    }
+		return Post.builder()
+				.id(null)
+				.studentId(createPostRequest.studentId)
+				.studentName(createPostRequest.studentName)
+				.issue(createPostRequest.issue)
+				.status(Status.WAIT)
+				.build();
+	}
 }

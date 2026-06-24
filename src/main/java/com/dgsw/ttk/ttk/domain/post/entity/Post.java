@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.util.UUID;
+
 @Entity
 @SuperBuilder
 @NoArgsConstructor
@@ -16,7 +18,7 @@ public class Post {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private String id;
+	private UUID id;
 
 	private String studentId; // 학번
 
