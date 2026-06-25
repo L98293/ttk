@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.UUID;
@@ -26,5 +27,6 @@ public class Post {
 
 	private String issue; // 신청 사유
 
+	@Setter
 	private Status status; // 승인 여부
 }

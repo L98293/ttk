@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public interface ViewPost {
 
-    Post viewPost(UUID uui);
+    Post viewPost(UUID uuid);
 
     List<Post> viewAllPost();
 }
